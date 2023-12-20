@@ -1,0 +1,61 @@
+def buscar(l3):   
+    for j in range(len(l3)):
+        if l3[j] == 's':
+            l3=l3[j:]
+            break
+    u=0
+    control=False
+    for t in range(len(l3)):
+        if l3[t]=='s':
+            for k in range(t,len(l3)):
+                if l3[k]=='a':
+                    for m in range(k,len(l3)):
+                        if l3[m]=='r':
+                            for h in range(m,len(l3)):
+                                if l3[h]=='a':
+                                    for f in range(h,len(l3)):
+                                        if l3[f]=='m':
+                                            for c in range(f,len(l3)):
+                                                if l3[c]=='a':
+                                                    for v in range(c,len(l3)):
+                                                        if l3[v]=='g':
+                                                            for u in range(v,len(l3)):
+                                                                if l3[u]=='o':
+                                                                    control = True 
+                                                                    #n+=1
+                                                                    #l3=l3[u+1:len(l3)]
+                                                                    break
+                                                            break   
+                                                    break   
+                                            break    
+                                    break   
+                            break   
+                    break  
+            break
+    return(control,u+1)
+
+def comparar(l):
+    l2=[]
+    for i in range(len(l)):
+        if l[i] == 's' or l[i] == 'a' or l[i] == 'r' or l[i] == 'm' or l[i] == 'g' or l[i] == 'o':
+            l2.append(l[i])
+    a=buscar(l2)
+    n=0
+    while len(l2) >= 8:
+        if a[0]==False:
+            break
+        else:
+            n+=1
+            b=a[1]
+            a=buscar(l2[b:len(l2)])
+    return n
+
+a=open('cameos.txt','r')
+lista=[]
+for renglones in a:
+    for letras in renglones:
+        lista.append(letras.lower())
+    print(comparar(lista))
+    lista=[]
+
+a.close
