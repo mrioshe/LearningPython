@@ -1,0 +1,3 @@
+Hola,
+Esto es un archivo de texto.
+Adiós.

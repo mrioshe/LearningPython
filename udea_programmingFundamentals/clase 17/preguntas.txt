@@ -1,0 +1,6 @@
+¿En Python las tuplas se pueden modificar? Si/No
+¿Cuál es el código en Python para añadir 5 como elemento al final de la lista L?
+¿Cómo se determina en Python el tamaño de la matriz M usando un método?
+¿Cómo se determina en Python el tamaño de la matriz M usando una función?
+¿Cuál símbolo se usa en pseudocódigo para concatenar cadenas de caracteres?
+¿Cuál es el operador en Python para elevar a un exponente?
